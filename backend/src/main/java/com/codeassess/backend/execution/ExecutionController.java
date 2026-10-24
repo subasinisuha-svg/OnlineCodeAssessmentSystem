@@ -10,7 +10,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://online-code-assessment-system.vercel.app"
+})
 public class ExecutionController {
 
     private final JavaExecutionService javaExecutionService;
