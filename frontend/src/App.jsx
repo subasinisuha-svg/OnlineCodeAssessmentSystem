@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import Editor from '@monaco-editor/react';
 import './App.css';
 
-const API = 'http://localhost:8081/api';
+const API = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : 'https://onlinecodeassessmentsystem.onrender.com/api';
 
 const mcqQuestions = [
   {
